@@ -1,0 +1,11 @@
+Methods IN Admin MarketingController
+
+public function addMultipleImages(Request $request){
+    $data['title'] = 'Add Marketing Images | HSCC';
+    return view('admin.MarketingTools.AddImages', compact('data'));
+}
+
+
+Web.php ruots...
+
+Route::any('marketing-tools/add-images', [MarketingController::class, 'addMultipleImages'])->name('add-Images');
